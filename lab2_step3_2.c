@@ -88,14 +88,14 @@ void copyArray(double array[columns][rows], double newArray[columns][rows]){
 void timeChange(double temps[columns][rows], int time){
     double oldTemps[columns][rows];
     copyArray(temps, oldTemps);
-    for (int xcolumn=1; xcolumn<time+2; xcolumn++){
+    for (int xcolumn=1; xcolumn<time+1; xcolumn++){
         for (int xrow=1; xrow<rows-1; xrow++){
             temps[xcolumn][xrow] = getTemp(oldTemps, xrow, xcolumn); 
             if (xrow==9){break;}           
         }
         if (xcolumn==9){break;}
     }
-    for (int xcolumn=columns-2; xcolumn>time+1; xcolumn--){
+    for (int xcolumn=columns-2; xcolumn>time; xcolumn--){
         for (int xrow=1; xrow<rows-1; xrow++){
             temps[xcolumn][xrow] = getTemp(oldTemps, xrow, xcolumn);
             if (xrow==9){break;}      
