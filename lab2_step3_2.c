@@ -95,7 +95,7 @@ void timeChange(double temps[columns][rows], int time){
         }
         if (xcolumn==9){break;}
     }
-    for (int xcolumn=columns-2; xcolumn>time+2; xcolumn--){
+    for (int xcolumn=columns-2; xcolumn>time+1; xcolumn--){
         for (int xrow=1; xrow<rows-1; xrow++){
             temps[xcolumn][xrow] = getTemp(oldTemps, xrow, xcolumn);
             if (xrow==9){break;}      
