@@ -17,7 +17,7 @@ int main(void){
 
     reset(temps);
     printArray(temps);
-    for (int time=1; time<5; time++){
+    for (int time=1; time<2; time++){
         timeChange(temps, time);
     }
 

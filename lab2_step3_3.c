@@ -113,7 +113,8 @@ void timeChange(double temps[columns][rows], int time){
 void makeNormalizedArray(double array[columns][rows], int normalizedArray[columns][rows]){
     for (int xcolumn=0; xcolumn<columns; xcolumn++){
         for (int xrow=0; xrow<rows; xrow++){
-            normalizedArray[xcolumn][xrow] = array[xcolumn][xrow]+5.5;
+            if (array[xcolumn][xrow]<0){normalizedArray[xcolumn][xrow] = array[xcolumn][xrow]+4.49;}
+            else {normalizedArray[xcolumn][xrow] = array[xcolumn][xrow]+5.5;}
         }
     }
 }
